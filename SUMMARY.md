@@ -34,7 +34,8 @@
   * 原理
   * 内存管理
 * [开发工具使用指南](kai-fa-gong-ju-shi-yong-zhi-nan.md)
-  * Git装逼指南
+  * [Git装逼指南](kai-fa-gong-ju-shi-yong-zhi-nan/gitzhuang-bi-zhi-nan.md)
+    * [标签使用](kai-fa-gong-ju-shi-yong-zhi-nan/gitzhuang-bi-zhi-nan/biao-qian-shi-yong.md)
   * [CocoaPod使用](kai-fa-gong-ju-shi-yong-zhi-nan/cocoapodshi-yong.md)
 * [第三方框架分析](di-san-fang-kuang-jia-fen-xi.md)
   * [ASDisplayKit原理](di-san-fang-kuang-jia-fen-xi/asdisplaykityuan-li.md)
