@@ -34,6 +34,7 @@
   * [锁  比较分析](ji-chu-zhi-shi/suo-bi-jiao-fen-xi.md)
   * [避免NSTimer 循环引用](ji-chu-zhi-shi/bi-mian-nstimer-xun-huan-yin-yong.md)
   * [离屏渲染](ji-chu-zhi-shi/li-ping-xuan-ran.md)
+  * [@dynamic与@synthesize](ji-chu-zhi-shi/dynamic4e0e-synthesize.md)
 * [性能优化](xing-neng-you-hua.md)
   * [界面流畅分析](xing-neng-you-hua/jie-mian-liu-chang-fen-xi.md)
 * [Block\(闭包\)](blockbi-530529.md)
