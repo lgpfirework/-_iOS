@@ -35,9 +35,11 @@
   * [避免NSTimer 循环引用](ji-chu-zhi-shi/bi-mian-nstimer-xun-huan-yin-yong.md)
   * [离屏渲染](ji-chu-zhi-shi/li-ping-xuan-ran.md)
   * [@dynamic与@synthesize](ji-chu-zhi-shi/dynamic4e0e-synthesize.md)
+  * [\_\_bridge,\_\_bridge\_retained,\_\_bridge\_transfer](ji-chu-zhi-shi/bridge-bridge-retained-bridge-transfer.md)
+  * [Category类扩展原理](ji-chu-zhi-shi/categorylei-kuo-zhan-yuan-li.md)
 * [性能优化](xing-neng-you-hua.md)
   * [界面流畅分析](xing-neng-you-hua/jie-mian-liu-chang-fen-xi.md)
-* [Block\(闭包\)](blockbi-530529.md)
+* [吃透Block\(闭包\)](blockbi-530529.md)
   * 原理
   * 内存管理
 * [开发工具使用指南](kai-fa-gong-ju-shi-yong-zhi-nan.md)
@@ -54,4 +56,6 @@
   * [底层实现](chi-tou-runloop/di-ceng-shi-xian.md)
   * [日常应用场景](chi-tou-runloop/ri-chang-ying-yong-chang-jing.md)
 * [吃透GCD\(待续\)](chi-tou-gcd.md)
+* 吃透NSOperation
+* 吃透RunTime
 
