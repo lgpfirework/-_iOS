@@ -40,6 +40,7 @@
   * [KVC的实现分析](ji-chu-zhi-shi/kvcde-shi-xian-fen-xi.md)
   * [KVO的实现分析](ji-chu-zhi-shi/kvode-shi-xian-fen-xi.md)
   * [objc\_masSend](ji-chu-zhi-shi/objcmassend.md)
+  * [循环引用](ji-chu-zhi-shi/xun-huan-yin-yong.md)
 * [性能优化](xing-neng-you-hua.md)
   * [界面流畅分析](xing-neng-you-hua/jie-mian-liu-chang-fen-xi.md)
 * [吃透Block\(闭包\)](blockbi-530529.md)
