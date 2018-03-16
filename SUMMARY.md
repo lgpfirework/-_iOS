@@ -25,5 +25,14 @@
   * [网络层](osican-kao-mo-xing/wang-luo-ceng.md)
   * [数据链路层](osican-kao-mo-xing/shu-ju-lian-lu-ceng.md)
   * [物理层](osican-kao-mo-xing/wu-li-ceng.md)
-* 基础知识
+* [基础知识](ji-chu-zhi-shi.md)
+  * [frame/position/anchorPoint](ji-chu-zhi-shi/framepositionanchorpoint.md)
+* [性能优化](xing-neng-you-hua.md)
+  * [界面流畅分析](xing-neng-you-hua/jie-mian-liu-chang-fen-xi.md)
+* [Block\(闭包\)](blockbi-530529.md)
+  * 原理
+  * 内存管理
+* [开发工具使用指南](kai-fa-gong-ju-shi-yong-zhi-nan.md)
+  * Git装逼指南
+  * [CocoaPod使用](kai-fa-gong-ju-shi-yong-zhi-nan/cocoapodshi-yong.md)
 
