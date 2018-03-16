@@ -1,0 +1,2 @@
+网络层是为传输层提供服务的，传送的协议数据单元称为[数据包](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8C%85)或分组。该层的主要作用是解决如何使数据包通过各结点传送的问题，即通过[路径](https://baike.baidu.com/item/%E8%B7%AF%E5%BE%84)选择算法（[路由](https://baike.baidu.com/item/%E8%B7%AF%E7%94%B1)）将数据包送到目的地。另外，为避免[通信子网](https://baike.baidu.com/item/%E9%80%9A%E4%BF%A1%E5%AD%90%E7%BD%91)中出现过多的数据包而造成[网络阻塞](https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E9%98%BB%E5%A1%9E)，需要对流入的数据包数量进行控制（[拥塞控制](https://baike.baidu.com/item/%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6)）。当数据包要跨越多个通信子网才能到达目的地时，还要解决网际互连的问题。
+
