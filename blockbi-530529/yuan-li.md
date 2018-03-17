@@ -17,17 +17,62 @@ block是一个指针结构体。
 
 其中有几个重要的结构体和函数，如下：
 
-\_\_block\_impl：这是一个结构体，也是C面向对象的体现，可以理解为block的基类;（结构体）
+\_\_block\_impl：这是一个结构体，也是C面向对象的体现，可以理解为block的基类;
 
-\_\_main\_block\_impl\_0: 可以理解为block变量;（结构体）
+\_\_main\_block\_impl\_0: 可以理解为block变量;
 
-\_\_main\_block\_func\_0: 可以理解为匿名函数；（函数）
+\_\_main\_block\_func\_0: 可以理解为匿名函数；
 
-\_\_main\_block\_desc\_0:block的描述, Block\_size;（结构体）
-
-
+\_\_main\_block\_desc\_0:block的描述, Block\_size;
 
 
+
+#### block捕获的外部变量分为4种：
+
+* 局部变量
+* 静态变量
+* 全局变量
+* 静态全局变量
+
+#### 其中：
+
+* 对于全局变量和静态全局变量被Block捕获后，可在Block内部修改其值，原理很简单，他们是全局变量，作用域很广的；
+
+* 静态变量传递给Block是内存地址值，所以能在Block里面直接改变值。
+
+* 而至于局部变量，则需要通过添加\_\_block修改其值了。
+
+底层实现按照\_\_block可以分两种:
+
+* 不添加\_\_block，在block捕获外部局部变量时，传递的是外部变量值，所以无法在block内部修改值；
+* 添加\_\_block，在block捕获外部局部变量时，传递的是由外部变量生成的结构体的指针地址，所以可在block内部修改局部变量；
+
+
+
+### Block有三种形式：
+
+* \_NSConcreteStackBlock（栈区block）
+* \_NSConcreteMallocBlock \(堆区block\)
+
+* \_NSConcreteGlobalBlock \(全局区block\)
+
+对于以上三者的区别，可以从两个角度来看：
+
+#### 1.从捕获外部变量的角度看：
+
+\_NSConcreteStackBlock：只用到外部局部变量、成员属性变量，且没有强指针引用的block都是StackBlock。
+
+\_NSConcreteMallocBlock：有强指针引用或copy修饰的成员属性引用的block会被复制一份到堆中成为MallocBlock
+
+\_NSConcreteGlobalBlock：没有用到外界变量或只用到全局变量、静态变量的block为\_NSConcreteGlobalBlock，生命周期从创建到应用程序结束。
+
+#### 2.从持有对象的角度上看：
+
+\_NSConcreteStackBlock：是不持有对象的。
+
+\_NSConcreteMallocBlock：是持有对象的。
+
+\_NSConcreteGlobalBlock：也不持有对象。
 
 
 
