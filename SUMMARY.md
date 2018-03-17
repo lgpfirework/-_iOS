@@ -44,8 +44,8 @@
 * [性能优化](xing-neng-you-hua.md)
   * [界面流畅分析](xing-neng-you-hua/jie-mian-liu-chang-fen-xi.md)
 * [吃透Block\(闭包\)](blockbi-530529.md)
-  * 原理
-  * 内存管理
+  * [原理](blockbi-530529/yuan-li.md)
+  * [内存管理](blockbi-530529/nei-cun-guan-li.md)
 * [开发工具使用指南](kai-fa-gong-ju-shi-yong-zhi-nan.md)
   * [Git装逼指南](kai-fa-gong-ju-shi-yong-zhi-nan/gitzhuang-bi-zhi-nan.md)
     * [标签使用](kai-fa-gong-ju-shi-yong-zhi-nan/gitzhuang-bi-zhi-nan/biao-qian-shi-yong.md)
@@ -62,4 +62,5 @@
 * [吃透GCD\(待续\)](chi-tou-gcd.md)
 * 吃透NSOperation
 * 吃透RunTime
+* [iOS内存分配&分区](iosnei-cun-fen-914d26-fen-qu.md)
 
