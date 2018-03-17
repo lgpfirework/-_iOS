@@ -25,8 +25,6 @@ block是一个指针结构体。
 
 \_\_main\_block\_desc\_0:block的描述, Block\_size;
 
-
-
 #### block捕获的外部变量分为4种：
 
 * 局部变量
@@ -45,9 +43,9 @@ block是一个指针结构体。
 底层实现按照\_\_block可以分两种:
 
 * 不添加\_\_block，在block捕获外部局部变量时，传递的是外部变量值，所以无法在block内部修改值；
-* 添加\_\_block，在block捕获外部局部变量时，传递的是由外部变量生成的结构体的指针地址，所以可在block内部修改局部变量；
+* 添加\_\_block，在block捕获外部局部变量时，传递的是由外部变量生成的结构体的指针地址，所以可在block内部修改局部变
 
-
+**（备注：无论有无\_\_block，当外部变量为对象时，会进行retain+1操作，故而会引起循环引用）**
 
 ### Block有三种形式：
 
@@ -73,6 +71,20 @@ block是一个指针结构体。
 \_NSConcreteMallocBlock：是持有对象的。
 
 \_NSConcreteGlobalBlock：也不持有对象。
+
+
+
+#### 以下4种情况系统都会默认调用copy方法把Block赋复制到堆上
+
+1.手动调用copy
+
+2.Block是函数的返回值
+
+3.Block被强引用，Block被赋值给\_\_strong或者id类型
+
+4.调用系统API入参中含有usingBlcok的方法
+
+**备注：当Block为函数参数的时候，就需要我们手动的copy一份到堆上了**
 
 
 
