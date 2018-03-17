@@ -62,7 +62,7 @@ block是一个指针结构体。
 
 \_NSConcreteMallocBlock：有强指针引用或copy修饰的成员属性引用的block会被复制一份到堆中成为MallocBlock
 
-\_NSConcreteGlobalBlock：没有用到外界变量或只用到全局变量、静态变量的block为\_NSConcreteGlobalBlock，生命周期从创建到应用程序结束。
+\_NSConcreteGlobalBlock：没有用到外界变量或只用到全局变量、静态变量的block为\_NSConcreteGlobalBlock
 
 #### 2.从持有对象的角度上看：
 
@@ -71,8 +71,6 @@ block是一个指针结构体。
 \_NSConcreteMallocBlock：是持有对象的。
 
 \_NSConcreteGlobalBlock：也不持有对象。
-
-
 
 #### 以下4种情况系统都会默认调用copy方法把Block赋复制到堆上
 
@@ -85,6 +83,4 @@ block是一个指针结构体。
 4.调用系统API入参中含有usingBlcok的方法
 
 **备注：当Block为函数参数的时候，就需要我们手动的copy一份到堆上了**
-
-
 
