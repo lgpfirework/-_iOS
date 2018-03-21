@@ -61,6 +61,7 @@
   * [内存管理](blockbi-530529/nei-cun-guan-li.md)
 * [吃透GCD\(待续\)](chi-tou-gcd.md)
 * [吃透NSOperation](chi-tou-nsoperation.md)
+  * [简介](chi-tou-nsoperation/jian-jie.md)
 * [吃透RunTime](chi-tou-runtime.md)
   * [简介](chi-tou-runtime/jian-jie.md)
   * [runtime面试常见问题](chi-tou-runtime/runtimemian-shi-chang-jian-wen-ti.md)
