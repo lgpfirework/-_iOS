@@ -12,21 +12,20 @@
 
 ASDK的目的就是尽量把这些任务从主线程挪走，而挪不走的，就尽量优化性能。
 
-根据控件是否需要响应触摸事件：layerBacked==YES  -&gt;
+根据控件是否需要响应触摸事件：layerBacked==YES  -&gt;
 
 ASDisplayNode充当了UIView，节省资源，提高效率
 
- 线程安全问题：UIView&CAlayer  : 线程不安全，只能在主线程创建销毁
+线程安全问题：UIView&CAlayer  : 线程不安全，只能在主线程创建销毁
 
-ASDisplayNoe     : 线程安全，可以在后台线程创建修改和销毁
+ASDisplayNoe     : 线程安全，可以在后台线程创建修改和销毁
 
-  Node刚创建时 ：
+Node刚创建时 ：
 
-1.内部不会生成UIView和CALayer,  直到第一次在主线程访问view或者layer属性时才会在内部生成对应的对象。
+1.内部不会生成UIView和CALayer,  直到第一次在主线程访问view或者layer属性时才会在内部生成对应的对象。
 
 2.当它的属性（frame/transform）改变后，不会立刻同步到其持有的view或者layer，而是将被改变的属性保存到一个内部的中间变量上去，稍后需要时通过某种机制一次性设置到内部的view和layer上去
 
-  
 以下对上面提到的某种机制做解释：
 
 原理：ASDK模仿Core Animation的动画机制
@@ -53,23 +52,25 @@ Runloop中注册了一个类似CA的Observer，但优先级比CA的低，当CA�
 
 通过以上这种机制，ASDK可以在合适的机会把异步，并发的操作同步到主线程去，并获得不错的性能
 
-- \(void\)viewDidLoad { 
+* \(void\)viewDidLoad {
 
-     \[super viewDidLoad\]; 
+  \[super viewDidLoad\];
 
-    // 创建观察者
+  // 创建观察者
 
- CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler\(CFAllocatorGetDefault\(\), kCFRunLoopAllActivities, YES, 0, ^\(CFRunLoopObserverRef observer, CFRunLoopActivity activity\)
+  CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler\(CFAllocatorGetDefault\(\), kCFRunLoopAllActivities, YES, 0, ^\(CFRunLoopObserverRef observer, CFRunLoopActivity activity\)
 
- { NSLog\(@"监听到RunLoop发生改变---%zd",activity\); }\);
+  { NSLog\(@"监听到RunLoop发生改变---%zd",activity\); }\);
 
- // 添加观察者到当前RunLoop中
+  // 添加观察者到当前RunLoop中
 
- CFRunLoopAddObserver\(CFRunLoopGetCurrent\(\), observer, kCFRunLoopDefaultMode\);
+  CFRunLoopAddObserver\(CFRunLoopGetCurrent\(\), observer, kCFRunLoopDefaultMode\);
 
- // 释放observer，最后添加完需要释放掉
+  // 释放observer，最后添加完需要释放掉
 
- CFRelease\(observer\);
+  CFRelease\(observer\);
 
- }
+  }
+
+
 
