@@ -27,6 +27,8 @@
   * [数据链路层](osican-kao-mo-xing/shu-ju-lian-lu-ceng.md)
   * [物理层](osican-kao-mo-xing/wu-li-ceng.md)
   * [http相关](osican-kao-mo-xing/httpxiang-guan.md)
+  * [http请求头和响应头报文结构](osican-kao-mo-xing/httpqing-qiu-tou-he-xiang-ying-tou-bao-wen-jie-gou.md)
+  * [TCP&UDP区别](osican-kao-mo-xing/tcpandudpqu-bie.md)
 * [基础知识](ji-chu-zhi-shi.md)
   * [frame/position/anchorPoint](ji-chu-zhi-shi/framepositionanchorpoint.md)
   * [tableview自适应高度总结](ji-chu-zhi-shi/tableviewzi-shi-ying-gao-du-zong-jie.md)
