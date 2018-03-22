@@ -1,4 +1,4 @@
-每一个UIView内部都默认关联着一个CALayer, UIView有frame、bounds和center三个属性，CALayer也有类似的属性，分别为frame、bounds、position、anchorPoint。frame和bounds比较好理解，bounds可以视为x坐标和y坐标都为0的frame，那position、anchorPoint是什么呢？先看看两者的原型，可知都是CGPoint点。
+****每一个UIView内部都默认关联着一个CALayer, UIView有frame、bounds和center三个属性，CALayer也有类似的属性，分别为frame、bounds、position、anchorPoint。frame和bounds比较好理解，bounds可以视为x坐标和y坐标都为0的frame，那position、anchorPoint是什么呢？先看看两者的原型，可知都是CGPoint点。
 
 @property CGPoint position  
 @property CGPoint anchorPoint
@@ -23,7 +23,7 @@
 
 在图1中，anchorPoint有\(0.5,0.5\)和\(0,0\)两种情况，分别为矩形的中心点与原点。那么，这两个anchorPoint在superLayer中的实际位置分别为多少呢？简单计算一下就可以得到\(100, 100\)和\(40, 60\)，把这两个值分别与各自的position值比较，发现完全一致，该不会是巧合？
 
-这时候可以大胆猜测一下，position是不是就是anchorPoint在superLayer中的位置呢？答案是确定的，更确切地说，position是layer中的anchorPoint点在superLayer中的位置坐标。因此可以说, position点是相对suerLayer的，anchorPoint点是相对layer的，两者是相对不同的坐标空间的一个重合点。
+**这时候可以大胆猜测一下，position是不是就是anchorPoint在superLayer中的位置呢？答案是确定的，更确切地说，position是layer中的anchorPoint点在superLayer中的位置坐标。因此可以说, position点是相对suerLayer的，anchorPoint点是相对layer的，两者是相对不同的坐标空间的一个重合点。**
 
 再来看看position的原始定义： The layer’s position in its superlayer’s coordinate space。  
 中文可以理解成为position是layer相对superLayer坐标空间的位置，很显然，这里的位置是根据anchorPoint来确定的。
