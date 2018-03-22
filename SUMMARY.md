@@ -17,6 +17,7 @@
   * [图](shu-ju-jie-gou/tu.md)
     * 无向图
     * 有向图
+  * [常见排序算法](shu-ju-jie-gou/chang-jian-pai-xu-suan-fa.md)
 * [OSI参考模型](osican-kao-mo-xing.md)
   * [应用层](osican-kao-mo-xing/ying-yong-ceng.md)
   * [表示层](osican-kao-mo-xing/biao-shi-ceng.md)
