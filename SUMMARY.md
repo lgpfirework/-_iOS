@@ -44,6 +44,7 @@
   * [循环引用](ji-chu-zhi-shi/xun-huan-yin-yong.md)
   * [什么时候需要使用@autoreleasepool{}](ji-chu-zhi-shi/shi-yao-shi-hou-xu-yaoshi-7528-autoreleasepool.md)
   * [SDWebImage原理](ji-chu-zhi-shi/sdwebimageyuan-li.md)
+  * [\_\_weak&\_\_block](ji-chu-zhi-shi/weak-andblock.md)
 * [性能优化](xing-neng-you-hua.md)
   * [界面流畅分析](xing-neng-you-hua/jie-mian-liu-chang-fen-xi.md)
 * [开发工具使用指南](kai-fa-gong-ju-shi-yong-zhi-nan.md)
