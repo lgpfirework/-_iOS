@@ -1,4 +1,2 @@
-# summary_iOS
-
-
+# Initial page
 
